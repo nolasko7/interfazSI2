@@ -40,3 +40,11 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>
 )
+
+
+
+
+
+
+
+//agregar al fondo del login volver, crear cuenta y olvidé mi contraseña
