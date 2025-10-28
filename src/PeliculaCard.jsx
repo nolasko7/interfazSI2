@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-/*
- * La tarjeta individual de película.
- * No necesita importar nada.
- */
-export default function PeliculaCard({ imagen, nombre, genero }) {
+export default function PeliculaCard({ id, imagen, nombre, genero }) {
   return (
-    <div className="pelicula">
-      <img src={imagen} alt={nombre} className="poster" />
-      <p className="nombre">{nombre}</p>
-      <p className="genero">{genero}</p>
-    </div>
-  )
+    <Link to={`/pelicula/${id}`} className="pelicula-link">
+      <div className="pelicula">
+        <img src={imagen} alt={nombre} className="poster" />
+        <p className="nombre">{nombre}</p>
+        <p className="genero">{genero}</p>
+      </div>
+    </Link>
+  );
 }
+

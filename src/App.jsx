@@ -1,19 +1,15 @@
-import { Routes, Route } from 'react-router-dom'
-import Home from './Home.jsx' // Este archivo lo creamos ahora
-import Login from './Login.jsx' // Este archivo lo movemos y creamos ahora
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'; 
+import Home from './Home.jsx';
+import Login from './Login.jsx';
+import DetallePelicula from './DetallePelicula.jsx';
 
-/*
- * App.jsx es el componente principal.
- * Su única responsabilidad es manejar las rutas (el "Router").
- */
-function App() {
+export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/pelicula/:id" element={<DetallePelicula />} />
     </Routes>
-  )
+  );
 }
-
-export default App
-

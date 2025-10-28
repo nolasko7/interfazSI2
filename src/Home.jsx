@@ -1,11 +1,8 @@
-import React from 'react'
-import NavBar from './NavBar.jsx' // <-- Ruta actualizada
-import HeroSlider from './HeroSlider.jsx' // <-- Ruta actualizada
-import Cartelera from './Cartelera.jsx' // <-- Ruta actualizada
+import React from 'react';
+import NavBar from './NavBar.jsx';
+import HeroSlider from './HeroSlider.jsx';
+import Cartelera from './Cartelera.jsx';
 
-/*
- * Ensambla los componentes.
- */
 export default function Home() {
   return (
     <>
@@ -13,5 +10,6 @@ export default function Home() {
       <HeroSlider />
       <Cartelera />
     </>
-  )
+  );
 }
+
