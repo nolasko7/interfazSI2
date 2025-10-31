@@ -30,7 +30,28 @@ export default function DetallePelicula() {
         <p className="detalle-meta"><strong>Director:</strong> {pelicula.director}</p>
         <h3 className="detalle-subtitulo">Sinopsis</h3>
         <p className="detalle-sinopsis">{pelicula.sinopsis}</p>
-        <button className="detalle-boton-comprar">Comprar Entrada</button>
+        <h3 className="detalle-subtitulo">Funciones</h3>
+        <div className="detalle-funciones-container">
+          {/* Bucle exterior para los DÍAS */}
+          {pelicula.funciones.dias.map(dia => (
+            <div key={dia} className="detalle-dia-grupo">
+              <h4 className="detalle-dia-subtitulo">{dia}</h4>
+              
+              {/* Bucle interior para los HORARIOS*/}
+              <div className="detalle-horarios-lista">
+                {pelicula.funciones.horarios.map(horario => (
+                  <Link 
+                    key={horario} 
+                    to={`/comprar/${pelicula.id}/${dia}/${horario}`} 
+                    className="detalle-horario-link"
+                  >
+                    {horario} hs
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
         <Link to="/" className="detalle-volver">Volver al inicio</Link>
       </div>
     </div>

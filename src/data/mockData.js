@@ -1,10 +1,9 @@
-// Usamos un placeholder genérico de internet para evitar errores de importación
+// Usamos un placeholder genérico de internet
 const placeholderImg = 'https://placehold.co/400x600/d00000/fafafa?text=Pelicula';
 import pelicula from '../assets/pelicula005.jpg'
 import pelicula1 from '../assets/pelicula003.jpg'
 import pelicula2 from '../assets/pelicula004.jpg'
 
-// Ahora nuestros datos tienen más detalles (sinopsis, director)
 export const peliculasData = [
   {
     id: 1,
@@ -12,7 +11,11 @@ export const peliculasData = [
     genero: "★ Drama",
     imagen: placeholderImg,
     director: "Juan Pérez",
-    sinopsis: "Una emocionante historia de superación y drama familiar."
+    sinopsis: "Una emocionante historia de superación y drama familiar.",
+    funciones: {
+      dias: ["Lunes", "Martes", "Miércoles"],
+      horarios: ["19:00", "21:30", "23:00"]
+    }
   },
   {
     id: 2,
@@ -20,7 +23,11 @@ export const peliculasData = [
     genero: "★ Animé",
     imagen: placeholderImg,
     director: "Ryu Nakayama",
-    sinopsis: "Denji y Pochita se enfrentan a nuevos demonios en esta aventura."
+    sinopsis: "Denji y Pochita se enfrentan a nuevos demonios en esta aventura.",
+    funciones: {
+      dias: ["Lunes", "Martes"],
+      horarios: ["18:00", "20:30", "22:45"]
+    }
   },
   {
     id: 3,
@@ -28,6 +35,11 @@ export const peliculasData = [
     genero: "★ Acción",
     imagen: placeholderImg,
     director: "Michael Bay",
-    sinopsis: "Explosiones, persecuciones y mucha acción."
+    sinopsis: "Explosiones, persecuciones y mucha acción.",
+    funciones: {
+      dias: ["Viernes", "Sábado", "Domingo"],
+      horarios: ["17:00", "19:45", "22:15"]
+    }
   }
 ];
+
